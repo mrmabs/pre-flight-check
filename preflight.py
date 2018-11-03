@@ -171,7 +171,7 @@ if __name__ == "__main__":
     horus_udp_rx.start() 
 
     # Run the Flask app, which will block until CTRL-C'd.
-    socketio.run(app, host='0.0.0.0', port=args.port)
+    socketio.run(app, host='0.0.0.0', port=int(args.port))
 
     # Attempt to close the listener.
     horus_udp_rx.close()
